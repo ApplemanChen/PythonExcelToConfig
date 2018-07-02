@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using GameFramework.DataTable;
+using Newtonsoft.Json;
+using UnityEngine;
+using UnityGameFramework.Runtime;
+
+/// <summary>
+/// {{note_name}}
+/// </summary>
+[Serializable]
+public class DR{{model_name}} : IDataRow {
+	{% for item in data_list %}
+	/// <summary>
+	/// {{item["noteName"]}}
+	/// </summary>
+	public {{item["fieldType"]}} {{item["fieldName"]}} { set; get; }
+	{% end %}
+
+	public void ParseDataRow(string dataRowText)
+    {
+    	
+    	DR{{model_name}} model = GameUtility.DeserializeObject<DR{{model_name}}>(dataRowText);
+		{%for item in data_list%}{{item["fieldName"]}} = model.{{item["fieldName"]}};
+		{% end %}
+	}
+}
