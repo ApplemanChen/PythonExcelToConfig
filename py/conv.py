@@ -86,12 +86,6 @@ def export_templates(sheet_name,field_names,field_types,field_notes):
 		print("字段数量和字段类型数量不匹配！")
 	
 
-def conv_field_type(field_type):
-	if field_type=="float":
-		return "double"
-	else:
-		return field_type
-
 # 保存输出文件
 def save_sheet(dataDict,sheet_name):
 	with open(os.getcwd()+"/output/json/"+get_output_name(sheet_name)+".json","w",encoding="utf-8") as file:
