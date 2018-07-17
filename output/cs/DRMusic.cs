@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 
 /// <summary>
-/// 物品类
+/// 背景音乐
 /// </summary>
 [Serializable]
-public class DRItemBag : IDataRow {
+public class DRMusic : IDataRow {
 	
 	/// <summary>
 	/// 唯一标识
@@ -27,31 +27,19 @@ public class DRItemBag : IDataRow {
 	public string Des { set; get; }
 	
 	/// <summary>
-	/// 品质
+	/// 资源名
 	/// </summary>
-	public int Quality { set; get; }
-	
-	/// <summary>
-	/// 装备类型
-	/// </summary>
-	public int EquipType { set; get; }
-	
-	/// <summary>
-	/// 是否顶级
-	/// </summary>
-	public bool IsBest { set; get; }
+	public string Asset { set; get; }
 	
 
 	public void ParseDataRow(string dataRowText)
     {
     	
-    	DRItemBag model = GameUtility.DeserializeObject<DRItemBag>(dataRowText);
+    	DRMusic model = GameUtility.DeserializeObject<DRMusic>(dataRowText);
 		Id = model.Id;
 		Name = model.Name;
 		Des = model.Des;
-		Quality = model.Quality;
-		EquipType = model.EquipType;
-		IsBest = model.IsBest;
+		Asset = model.Asset;
 		
 	}
 }
