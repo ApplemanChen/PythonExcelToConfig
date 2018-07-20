@@ -24,4 +24,10 @@ public class DR{{model_name}} : IDataRow {
 		{%for item in data_list%}{{item["fieldName"]}} = model.{{item["fieldName"]}};
 		{% end %}
 	}
+
+	//以下方法只是为了避免编译类型JIT,实际无调用
+	private void AvoidJIT()
+	{
+		new Dictionary<int, DR{{model_name}}>();
+	}
 }

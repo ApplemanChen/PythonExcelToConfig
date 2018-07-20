@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityGameFramework.Runtime;
 
 /// <summary>
-/// 背景音乐
+/// 场景
 /// </summary>
 [Serializable]
-public class DRMusic : IDataRow {
+public class DRScene : IDataRow {
 	
 	/// <summary>
 	/// 唯一标识
@@ -17,35 +17,29 @@ public class DRMusic : IDataRow {
 	public int Id { set; get; }
 	
 	/// <summary>
-	/// 名称
-	/// </summary>
-	public string Name { set; get; }
-	
-	/// <summary>
-	/// 描述
-	/// </summary>
-	public string Des { set; get; }
-	
-	/// <summary>
 	/// 资源名
 	/// </summary>
-	public string Asset { set; get; }
+	public string AssetName { set; get; }
+	
+	/// <summary>
+	/// 背景音乐id
+	/// </summary>
+	public int BgmId { set; get; }
 	
 
 	public void ParseDataRow(string dataRowText)
     {
     	
-    	DRMusic model = GameUtility.DeserializeObject<DRMusic>(dataRowText);
+    	DRScene model = GameUtility.DeserializeObject<DRScene>(dataRowText);
 		Id = model.Id;
-		Name = model.Name;
-		Des = model.Des;
-		Asset = model.Asset;
+		AssetName = model.AssetName;
+		BgmId = model.BgmId;
 		
 	}
 
 	//以下方法只是为了避免编译类型JIT,实际无调用
 	private void AvoidJIT()
 	{
-		new Dictionary<int, DRMusic>();
+		new Dictionary<int, DRScene>();
 	}
 }
