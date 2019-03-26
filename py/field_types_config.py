@@ -1,11 +1,12 @@
 # 配置字段类型配置
 field_types = {
+	"bool":lambda data:get_bool(data),
 	"int":lambda data:get_int(data),
 	"string":lambda data:get_string(data),
+	"float":lambda data:get_float(data),
 	"int[]":lambda data:get_int_list(data),
 	"string[]":lambda data:get_string_list(data),
-	"bool":lambda data:get_bool(data),
-	"float":lambda data:get_float(data),
+	"float[]":lambda data:get_float_list(data),
 }
 
 def get_int(data):
@@ -24,6 +25,8 @@ def get_string(data):
 
 def get_int_list(data):
 	try:
+		if data == "":
+			return []
 		data_list = data.split(",")
 		for i in range(len(data_list)):
 			data_list[i] = int(data_list[i])
@@ -34,10 +37,25 @@ def get_int_list(data):
 
 def get_string_list(data):
 	try:
+		if data == "":
+			return []
+
 		data_list = data.split(",")
 		return data_list
 	except Exception as e:
 		print("string_list类型转换失败！data = "+data)
+		raise e
+
+def get_float_list(data):
+	try:
+		if data == "":
+			return []
+
+		data_list = data.split(",")
+		for i in range(len(data_list)):
+			data_list[i] = float(data_list[i])
+		return data_list
+	except Exception as e:
 		raise e
 
 def get_bool(data):

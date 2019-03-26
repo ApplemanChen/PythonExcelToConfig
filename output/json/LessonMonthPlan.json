@@ -1,0 +1,11 @@
+{"Id": 100101, "GradeId": 100101, "MonthPlanName": "Lesson.Month9.Name", "MonthShortName": "Sep.", "MonthPlanNameNote": "第一年9月", "MonthPlanDesc": "Hello,New Friends", "Categories": [1, 2], "Lessons": [100101, 100102]}
+{"Id": 100102, "GradeId": 100101, "MonthPlanName": "Lesson.Month10.Name", "MonthShortName": "Oct.", "MonthPlanNameNote": "第一年10月", "MonthPlanDesc": "China (Panda+Body)", "Categories": [1, 2], "Lessons": [100101, 100102]}
+{"Id": 100103, "GradeId": 100101, "MonthPlanName": "Lesson.Month11.Name", "MonthShortName": "Nov.", "MonthPlanNameNote": "第一年11月", "MonthPlanDesc": "My Family", "Categories": [], "Lessons": []}
+{"Id": 100104, "GradeId": 100101, "MonthPlanName": "Lesson.Month12.Name", "MonthShortName": "Dec.", "MonthPlanNameNote": "第一年12月", "MonthPlanDesc": "Seasons", "Categories": [], "Lessons": []}
+{"Id": 100105, "GradeId": 100101, "MonthPlanName": "Lesson.Month1.Name", "MonthShortName": "Jan/Feb.", "MonthPlanNameNote": "第二年1、2月", "MonthPlanDesc": "Spring Festival", "Categories": [], "Lessons": []}
+{"Id": 100106, "GradeId": 100102, "MonthPlanName": "Lesson.Month3.Name", "MonthShortName": "Mar.", "MonthPlanNameNote": "第二年年3月", "MonthPlanDesc": "On the Farm", "Categories": [], "Lessons": []}
+{"Id": 100107, "GradeId": 100102, "MonthPlanName": "Lesson.Month4.Name", "MonthShortName": "Apr.", "MonthPlanNameNote": "第二年年4月", "MonthPlanDesc": "Space (Sun,Moon,Star)", "Categories": [], "Lessons": []}
+{"Id": 100108, "GradeId": 100102, "MonthPlanName": "Lesson.Month5.Name", "MonthShortName": "May.", "MonthPlanNameNote": "第二年年5月", "MonthPlanDesc": "I Can", "Categories": [], "Lessons": []}
+{"Id": 100109, "GradeId": 100102, "MonthPlanName": "Lesson.Month6.Name", "MonthShortName": "June", "MonthPlanNameNote": "第二年年6月", "MonthPlanDesc": "Plants (Veges&Fruit)", "Categories": [], "Lessons": []}
+{"Id": 100110, "GradeId": 100102, "MonthPlanName": "Lesson.Month7.Name", "MonthShortName": "July.", "MonthPlanNameNote": "第二年年7月", "MonthPlanDesc": "Ocean Animals", "Categories": [], "Lessons": []}
+{"Id": 100111, "GradeId": 100102, "MonthPlanName": "Lesson.Month8.Name", "MonthShortName": "Aug.", "MonthPlanNameNote": "第二年年8月", "MonthPlanDesc": "Ocean Animals", "Categories": [], "Lessons": []}

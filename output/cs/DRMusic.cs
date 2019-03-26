@@ -22,11 +22,6 @@ public class DRMusic : IDataRow {
 	public string Name { set; get; }
 	
 	/// <summary>
-	/// 描述
-	/// </summary>
-	public string Des { set; get; }
-	
-	/// <summary>
 	/// 资源名
 	/// </summary>
 	public string Asset { set; get; }
@@ -38,7 +33,6 @@ public class DRMusic : IDataRow {
     	DRMusic model = GameUtility.DeserializeObject<DRMusic>(dataRowText);
 		Id = model.Id;
 		Name = model.Name;
-		Des = model.Des;
 		Asset = model.Asset;
 		
 	}

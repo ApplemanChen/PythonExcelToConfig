@@ -1,0 +1,15 @@
+[
+    "Entity",
+    "LessonCategory",
+    "LessonContent",
+    "LessonGrade",
+    "LessonInfo",
+    "LessonModule",
+    "LessonMonthPlan",
+    "Music",
+    "PianoBeat",
+    "PianoResConfig",
+    "Scene",
+    "Sound",
+    "UIForm"
+]

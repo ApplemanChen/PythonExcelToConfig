@@ -1,3 +1,6 @@
-{"Id": 100101, "Name": "背景音乐1", "Des": "这是背景音乐1", "Asset": "music1"}
-{"Id": 100102, "Name": "背景音乐2", "Des": "这是背景音乐2", "Asset": "music2"}
-{"Id": 100103, "Name": "背景音乐3", "Des": "这是背景音乐3", "Asset": "music3"}
+{"Id": 100101, "Name": "主框架背景音乐", "Asset": "UGame/Common/Sounds/BGM/MainBGM"}
+{"Id": 100102, "Name": "打地鼠背景音乐", "Asset": "UGame/Common/Sounds/BGM/WhacAMoleBGM"}
+{"Id": 100103, "Name": "涂一涂背景音乐", "Asset": "UGame/Common/Sounds/BGM/ColorItBGM"}
+{"Id": 100104, "Name": "找一找背景音乐", "Asset": "UGame/Common/Sounds/BGM/ScavengerHuntBGM"}
+{"Id": 100105, "Name": "拼一拼背景音乐", "Asset": "UGame/Common/Sounds/BGM/StorySequencingBGM"}
+{"Id": 100106, "Name": "猜一猜背景音乐", "Asset": "UGame/Common/Sounds/BGM/MatchUpBGM"}

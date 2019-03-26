@@ -1,4 +1,4 @@
-# excel2json
+# -*-coding:utf-8-*-
 import field_types_config
 import os
 import xlrd
@@ -19,14 +19,25 @@ def read_excels_paths():
 	return path_list
 
 # 导出excel
-def export_excels(path_list):	
+def export_excels(path_list):
+	# 导出的表格列表
+	global export_sheet_list
+	global sheet_list_file
+	export_sheet_list = []
+
 	for path in path_list:
 		file_name = os.path.basename(path)
 		work_book = xlrd.open_workbook(path)
 		# print(work_book.sheet_names())
 		for sheet_name in work_book.sheet_names():
 			if check_need_export(sheet_name):
+				export_sheet_list.append(get_output_name(sheet_name))
 				export_sheet(file_name,work_book,sheet_name)
+	
+	# 生成全部的导表列表
+	export_sheet_list.sort()
+	with open(sheet_list_file,"w",encoding="utf-8") as file:
+		file.write(json.dumps(export_sheet_list,indent=4))
 	print("导表完成！")
 	pass
 
@@ -124,7 +135,7 @@ def check_need_export(sheet_name):
 	else:
 		return False
 
-# 清空输出文件夹
+# 清空导表输出文件夹
 def clear_output():
 	global output_path
 	if os.path.exists(output_path):
@@ -133,31 +144,65 @@ def clear_output():
 	os.mkdir(output_path+"/cs")		
 	os.mkdir(output_path+"/json")		
 
+# 清理项目中的导出文件夹
+def clear_project_dir(to_cs_path,to_json_path):
+	try:
+		# 清理CS文件
+		if os.path.exists(to_cs_path):
+			cs_files = os.listdir(to_cs_path)
+			for file in cs_files:
+				# 只清理数据表导出的文件
+				if file.startswith("DR") and file.endswith(".cs"):
+					os.remove(to_cs_path+"/"+file)
+
+		# 清理json文件
+		if os.path.exists(to_json_path):
+			shutil.rmtree(to_json_path)
+		pass
+	except Exception as e:
+		raise Exception("清理项目中的导出文件夹错误！")
+	pass
+
 # 拷贝导出文件到项目目录中
 def copy_output():
 	global output_path
+	global sheet_list_file
 	print("正在拷贝输出文件到项目..")
 	config = configparser.ConfigParser()
 	config.read(os.getcwd()+"/config/path.cfg")
 	to_cs_path = config.get("project_path","cs_path")
 	to_json_path = config.get("project_path","json_path")
+	to_sheet_list_path = config.get("project_path","sheet_list_path")
 	from_cs_path = output_path+"/cs"
 	from_json_path = output_path+"/json"
+	clear_project_dir(to_cs_path,to_json_path)
 	copy_files(from_cs_path,to_cs_path)
 	copy_files(from_json_path,to_json_path)
+	copy_file(sheet_list_file,to_sheet_list_path)
 	print("拷贝完成！")
 
-# 拷贝文件
+# 拷贝文件夹内文件
 def copy_files(from_path,to_path):
 	from_files = os.listdir(from_path)
+	if not os.path.exists(to_path):
+		os.mkdir(to_path)
+	
 	for file in from_files:
 		shutil.copy(from_path+"/"+file,to_path+"/"+file)
+
+# 拷贝单个文件
+def copy_file(from_path,to_path):
+	if os.path.exists(from_path):
+		shutil.copy(from_path,to_path)
 
 def main():
 	global output_path
 	global xls_dir
+	global export_sheet_list
+	global sheet_list_file
 	output_path = os.getcwd()+"/output"
 	xls_dir = os.getcwd()+"/xls/"
+	sheet_list_file = os.getcwd()+"/output/SheetList.json"
 
 	# 清空输出文件夹
 	clear_output()

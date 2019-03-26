@@ -1,0 +1,30 @@
+{"Id": 100101, "Name": "点击音效", "Asset": "UGame/Common/Sounds/ButtonClick"}
+{"Id": 100102, "Name": "倒计时", "Asset": "UGame/Common/Sounds/CountDown"}
+{"Id": 100103, "Name": "拖动到正确位置", "Asset": "UGame/Common/Sounds/DragCorrectly"}
+{"Id": 100104, "Name": "拖动位置错误", "Asset": "UGame/Common/Sounds/DragError"}
+{"Id": 100105, "Name": "胜利音效", "Asset": "UGame/Common/Sounds/MinGameWin"}
+{"Id": 100106, "Name": "胜利Excellent", "Asset": "UGame/Common/Sounds/EndingWord/excellent"}
+{"Id": 100107, "Name": "胜利Great", "Asset": "UGame/Common/Sounds/EndingWord/great"}
+{"Id": 100108, "Name": "胜利Perfect", "Asset": "UGame/Common/Sounds/EndingWord/perfect"}
+{"Id": 100109, "Name": "胜利PrettyGood", "Asset": "UGame/Common/Sounds/EndingWord/pretty good"}
+{"Id": 100110, "Name": "胜利Wonderful", "Asset": "UGame/Common/Sounds/EndingWord/wonderful"}
+{"Id": 100111, "Name": "翻书", "Asset": "UGame/Common/Sounds/TurnPage"}
+{"Id": 200101, "Name": "打地鼠题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Whac-A-Mole"}
+{"Id": 200102, "Name": "涂一涂题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Color_it"}
+{"Id": 200103, "Name": "找一找题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Scavenger Hunt"}
+{"Id": 200104, "Name": "拼一拼题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Story Sequencing"}
+{"Id": 200105, "Name": "猜一猜题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Match Up"}
+{"Id": 200106, "Name": "弹钢琴题目音效", "Asset": "UGame/Common/Sounds/Module/Title-Play the piano"}
+{"Id": 200201, "Name": "年级1", "Asset": "UGame/Common/Sounds/Grade/Level1"}
+{"Id": 200202, "Name": "年级2", "Asset": "UGame/Common/Sounds/Grade/Level2"}
+{"Id": 200203, "Name": "年级3", "Asset": "UGame/Common/Sounds/Grade/Level3"}
+{"Id": 200301, "Name": "分类1(学一学)", "Asset": "UGame/Common/Sounds/Category/Let‘s Learn"}
+{"Id": 200302, "Name": "分类2(歌曲)", "Asset": "UGame/Common/Sounds/Category/Song"}
+{"Id": 200303, "Name": "分类3(手工)", "Asset": "UGame/Common/Sounds/Category/Craft"}
+{"Id": 200304, "Name": "分类4(艺术)", "Asset": "UGame/Common/Sounds/Category/Artwork"}
+{"Id": 200305, "Name": "分类5(日常英语)", "Asset": "UGame/Common/Sounds/Category/Circle Time"}
+{"Id": 200306, "Name": "分类6(故事)", "Asset": "UGame/Common/Sounds/Category/Story Time"}
+{"Id": 200307, "Name": "分类7(科学实验)", "Asset": "UGame/Common/Sounds/Category/Science Experiment"}
+{"Id": 200308, "Name": "分类8(节日)", "Asset": "UGame/Common/Sounds/Category/Holiday"}
+{"Id": 200309, "Name": "分类9(角色扮演)", "Asset": "UGame/Common/Sounds/Category/Role-play"}
+{"Id": 200401, "Name": "课时1", "Asset": "UGame/Common/Sounds/Lesson/boy girl teacher"}

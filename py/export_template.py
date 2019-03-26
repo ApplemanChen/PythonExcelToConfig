@@ -9,10 +9,10 @@ def export_cs(model_dict):
 	with open(template_path,"r",encoding="utf-8") as file:
 		t = template.Template(file.read())
 	# pprint.pprint(model_dict)
-	# 当字段类型为float时，c#代码中自动转化为double
-	for item in model_dict["data_list"]:
-		if item["fieldType"]=="float":
-			item["fieldType"]="double"
+	# 当字段类型为float时，c#代码中自动转化为double,这是因为json在解析float可能是会出现精度丢失，double不会
+	# for item in model_dict["data_list"]:
+	# 	if item["fieldType"]=="float":
+	# 		item["fieldType"]="double"
 
 	s = t.generate(
 			note_name = model_dict["note_name"],

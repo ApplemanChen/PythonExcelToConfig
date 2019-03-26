@@ -1,0 +1,2 @@
+{"Id": 100101, "GradeId": 100101, "CategoryType": 1, "LessonName": "Lesson.Info1.Name", "NameNote": "Boy,Girl,Teacher", "ContentIds": [10001, 20001, 30001, 40001], "ContentNotes": ["打地鼠", "涂一涂", "找一找", "拼一拼"], "SoundId": 200401}
+{"Id": 100102, "GradeId": 100101, "CategoryType": 2, "LessonName": "Lesson.Info1.Name", "NameNote": "Boy,Girl,Teacher", "ContentIds": [50001, 60001], "ContentNotes": ["猜一猜", "弹钢琴"], "SoundId": 200401}
